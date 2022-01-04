@@ -1,5 +1,12 @@
 <% if user_signed_in? %>
 
+  <% if !current_user.employee%>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      Por favor, complete seu cadastro <%= link_to "clicando aqui", new_employee_path %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% end %>
+
   <h1>Funcionários</h1>
 
   <table class='table'>
