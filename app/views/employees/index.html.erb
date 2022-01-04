@@ -1,0 +1,28 @@
+<% if user_signed_in? %>
+
+  <h1>Funcionários</h1>
+
+  <table class='table'>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Ramal</th>
+        <th>E-mail<th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @employees.each do |employee| %>
+        <tr>
+          <td><%= employee.first_name %> <%= employee.last_name %></td>
+          <td><%= employee.phone %></td>
+          <td><%= employee.user.email %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+<% else %>
+  <%= render("home/index") %>
+<% end %>

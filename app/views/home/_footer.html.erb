@@ -4,13 +4,33 @@
       <li class="nav-item">
         <%= link_to "Home", root_path, class: "nav-link px-2 text-muted" %>
       </li>
+      <% if user_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Perfil", "#", class: "nav-link px-2 text-muted" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Conta", edit_user_registration_path, 
+            class: "nav-link px-2 text-muted" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Sair", destroy_user_session_path, method: :delete, 
+            class: "nav-link px-2 text-muted" %>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "Por que usar?", root_path + "#features", 
+            class: "nav-link px-2 text-muted" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Perguntas Frequentes", root_path + "#faq", 
+            class: "nav-link px-2 text-muted" %>
+        </li>
+      <% end %>
       <li class="nav-item">
-        <%= link_to "Por que usar?", "#features", class: "nav-link px-2 text-muted" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to "Perguntas Frequentes", "#faq", class: "nav-link px-2 text-muted" %>
-      </li>
+          <%= link_to "Notas de Versão", versions_index_path, 
+            class: "nav-link px-2 text-muted" %>
+        </li>
     </ul>
-    <p class="text-center text-muted">© 2022 Ramais Centralizados</p>
+    <p class="text-center text-muted">© <%= DateTime.now.year %> Ramais Centralizados Inc.</p>
   </footer>
 </div>
