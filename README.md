@@ -1,24 +1,11 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Este é um aplicativo open source e gratuito feito para ajudar resolver um problema do meu dia a dia.
 
-Things you may want to cover:
+Ele foi feito com Ruby on Rails.
 
-* Ruby version
+## Dados técnicos
 
-* System dependencies
+Ruby 2.7.4
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Rails 6.1
